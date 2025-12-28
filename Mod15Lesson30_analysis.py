@@ -5,7 +5,4 @@ data = { "city": [ "Kyiv", "Lviv", "Odesa" ],
 df = pd.DataFrame(data)
 print( "Продажі по містах:" )
 print( df )
-
-average_sales = df[ "sales" ].mean()
-print( "Середнє значення: ", average_sales )
-print( "Це середній рівень продажів по трьох містах" )
+print( "Середнє значення:", round( df[ "sales" ].mean(), 2 ) )
