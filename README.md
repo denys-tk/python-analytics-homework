@@ -54,34 +54,17 @@
   !!! Гілка feature/update-sales-rejected спеціально не видалена для звітності
 
 Крок 6. Сценарій 3: відкочування коміту через revert
-( ) Завдання 6.1. Створення гілки для нових змін 
-( ) Завдання 6.2. Додавання коментаря 
+(+) Завдання 6.1. Створення гілки для нових змін 
+(+) Завдання 6.2. Додавання коментаря 
+(+) Завдання 6.3. Коміт і push 
+(+) Завдання 6.4. Створення і злиття Pull Request 
+(+) Завдання 6.5. Реверт коміту на GitHub 
+(+) Завдання 6.6. Підтягування реверту у PyCharm (Vsual Studio Code)
 
-Відкрий analysis.py і знайди рядок:
-  print( f"Середнє значення: { df[ "sales"].mean() }" )
-
-Заміни його на наступні рядки:
-  average_sales = df[ "sales" ].mean()
-  print( f"Середнє значення: { average_sales } )
-  print( "Це середній рівень продажів по трьох містах" )
-
-Переконайся, що відступи коректні, і збережи файл (Ctrl+S або Cmd+S).
-
-( ) Завдання 6.3. Коміт і push 
-
-Натисни Git → Commit, у поле Commit Message введи: add average sales comment. Натисни Commit and Push і дочекайся повідомлення про успішний push.
-
-( ) Завдання 6.4. Створення і злиття Pull Request 
-
-Відкрий репозиторій на GitHub, перейди у вкладку Pull requests → New pull request. У полі base вибери main, у полі compare вибери feature/add-average-comment. У Title введи: Add comment about average sales. Натисни Create pull request, потім Merge pull request і Confirm merge. Натисни Delete branch для видалення гілки.
-
-( ) Завдання 6.5. Реверт коміту на GitHub 
-
-На головній сторінці репозиторію (вкладка Code) знайди напис X commits і натисни на нього. У списку комітів знайди коміт з повідомленням add average sales comment і натисни на рядок з цим комітом. На сторінці коміту знайди кнопку Revert (зазвичай праворуч) і натисни її. GitHub відкриє форму для нового Pull Request з реверт-змінами. У полі Title можна залишити стандартний текст. Натисни Create pull request, потім Merge pull request і Confirm merge.
-
-( ) Завдання 6.6. Підтягування реверту у PyCharm 
-
-У PyCharm переключись на гілку main (якщо ти ще на feature/add-average-comment). У верхньому меню натисни Git → Pull і дочекайся завершення. Відкрий analysis.py і перевір, що додаткові рядки з average_sales та коментарем зникли - файл повернувся до вигляду до цього коміту.
+Результат:
+  Гілка feature/feature/add-average-comment
+  Зміни в Mod15Lesson30_analysis.py
+  Git CLI: git revert 787e6e3
 
 Крок 7. Перегляд історії комітів
 
